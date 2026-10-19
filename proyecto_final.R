@@ -35,4 +35,14 @@ datos$productivity_decline_score <- factor(datos$productivity_decline_score,leve
 #Datos faltantes
 which(colSums(is.na(datos))> 0) #No hay datos faltantes
 
-
+#Análisis exploratorio
+hist(datos$age,main="Edad",xlab="Edad [años]",ylab="Frecuencia",col="lightblue")
+barplot(table(datos$gender),main="Género",xlab="Género",ylab="Frecuencia",col=rainbow(3))
+barplot(table(datos$education_level),main="Grado escolar máximo/en curso",xlab="Grado",ylab="Frecuencia",col=rainbow(3))
+hist(datos$avg_daily_sm_hours,main="Promedio de horas de redes sociales / día",xlab="Uso de redes / día [horas]",ylab="Frecuencia",col="lightblue")
+hist(datos$years_on_social_media,main="Años en redes sociales",xlab="Años en redes",ylab="Frecuencia",col="lightblue")
+hist(datos$avg_daily_screen_time_hours,main="Promedio de horas frente a pantalla / día",xlab="Horas frente a pantalla / día",ylab="Frecuencia",col="lightblue")
+hist(datos$avg_sleep_hours,main="Promedio de horas de sueño",xlab="Horas de sueño",ylab="Frecuencia",col="lightblue")
+hist(datos$attention_span_minutes,main="Capacidad de atención",xlab="Capacidad de atención [minutos]",ylab="Frecuencia",col="lightblue")
+hist(datos$deep_work_duration_minutes,main="Duración de trabajo profundo",xlab="Duración de trabajo profundo [minutos]",ylab="Frecuencia",col="lightblue")
+hist(datos$reading_duration_minutes_per_day,main="Tiempo de lectura / día", xlab="Tiempo de lectura [minutos]",ylab="Frecuencia",col="lightblue")
